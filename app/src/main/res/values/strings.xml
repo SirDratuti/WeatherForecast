@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Weather</string>
+    <string name="WeatherSign">Weather Forecast</string>
+    <string name="RainProbability">Rain Probability</string>
+    <string name="Temperature">Temperature</string>
+    <string name="Humidity">Air Humidity</string>
+    <string name="RainProbabilityValue">78%</string>
+    <string name="TemperatureValue">22°C</string>
+    <string name="HumidityValue">5%</string>
+    <string name="TwoDaysBefore">27</string>
+    <string name="TwoDaysBeforeMonth">September</string>
+    <string name="TwoDaysBeforeTemperature">-2°C</string>
+    <string name="OneDayBefore">28</string>
+    <string name="OneDayBeforeMonth">September</string>
+    <string name="OneDayBeforeTemperature">14°C</string>
+    <string name="Today">29</string>
+    <string name="TodayMonth">September</string>
+    <string name="TodayTemperature">22°C</string>
+    <string name="NextDay">30</string>
+    <string name="NextDayMonth">September</string>
+    <string name="NextDayTemperature">8°C</string>
+    <string name="AfterTomorrow">1</string>
+    <string name="AfterTomorrowMonth">October</string>
+    <string name="AfterTomorrowTemperature">15°C</string>
+</resources>

@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="11dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/WeatherSign"
+        style="@style/Bracket.Head"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/WeatherSign"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:drawableBottomCompat="@drawable/rainyBig" />
+
+
+    <TextView
+        android:id="@+id/RainProbabilitySign"
+        style="@style/Bracket.FrontSign"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/RainProbability"
+        app:layout_constraintStart_toEndOf="@id/WeatherSign"
+        app:layout_constraintTop_toTopOf="@id/WeatherSign" />
+
+    <TextView
+        android:id="@+id/TemperatureSign"
+        style="@style/Bracket.FrontSign"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/Temperature"
+        app:layout_constraintStart_toEndOf="@id/WeatherSign"
+        app:layout_constraintEnd_toEndOf="@id/RainProbabilitySign"
+        app:layout_constraintTop_toBottomOf="@id/RainProbabilitySign"
+        app:layout_constraintBottom_toTopOf="@id/HumiditySign"/>
+
+    <TextView
+        android:id="@+id/HumiditySign"
+        style="@style/Bracket.FrontSign"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/Humidity"
+        app:layout_constraintEnd_toEndOf="@id/TemperatureSign"
+        app:layout_constraintStart_toEndOf="@id/WeatherSign"
+        app:layout_constraintTop_toBottomOf="@id/TemperatureSign"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <TextView
+        android:id="@+id/RainProbability"
+        style="@style/Bracket.FrontValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/RainProbabilityValue"
+        app:layout_constraintBottom_toTopOf="@id/TemperatureSign"
+        app:layout_constraintEnd_toEndOf="@id/RainProbabilitySign"
+        app:layout_constraintStart_toStartOf="@id/RainProbabilitySign"
+        app:layout_constraintTop_toBottomOf="@+id/RainProbabilitySign" />
+
+    <TextView
+        android:id="@+id/Temperature"
+        style="@style/Bracket.FrontValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/TemperatureValue"
+        app:layout_constraintEnd_toEndOf="@id/TemperatureSign"
+        app:layout_constraintStart_toStartOf="@id/TemperatureSign"
+        app:layout_constraintTop_toBottomOf="@id/TemperatureSign"
+        app:layout_constraintBottom_toTopOf="@id/HumiditySign"/>
+
+    <TextView
+        android:id="@+id/WindSpeed"
+        style="@style/Bracket.FrontValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/HumidityValue"
+        app:layout_constraintEnd_toEndOf="@id/HumiditySign"
+        app:layout_constraintStart_toStartOf="@id/HumiditySign"
+        app:layout_constraintTop_toBottomOf="@id/HumiditySign"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+    <TextView
+        android:id="@+id/TwoDaysLeftSign"
+        style="@style/Bracket.Sign"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="@string/TwoDaysBefore"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/RainProbabilitySign"
+        app:layout_constraintBottom_toTopOf="@id/OneDayLeftSign"
+        app:layout_constraintEnd_toStartOf="@id/TwoDaysLeftMonth" />
+
+    <TextView
+        android:id="@+id/OneDayLeftSign"
+        style="@style/Bracket.Sign"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="@string/OneDayBefore"
+        app:layout_constraintTop_toBottomOf="@id/TwoDaysLeftSign"
+        app:layout_constraintBottom_toTopOf="@id/TodaySign"
+        app:layout_constraintStart_toStartOf="@id/TwoDaysLeftSign"
+        app:layout_constraintEnd_toEndOf="@id/TwoDaysLeftSign"
+
+        />
+
+    <TextView
+        android:id="@+id/TodaySign"
+        style="@style/Bracket.Sign"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="@string/Today"
+        app:layout_constraintTop_toBottomOf="@id/OneDayLeftSign"
+        app:layout_constraintBottom_toTopOf="@id/NextDaySign"
+        app:layout_constraintStart_toStartOf="@id/OneDayLeftSign"
+        app:layout_constraintEnd_toEndOf="@id/OneDayLeftSign"/>
+
+    <TextView
+        android:id="@+id/NextDaySign"
+        style="@style/Bracket.Sign"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="@string/NextDay"
+        app:layout_constraintTop_toBottomOf="@id/TodaySign"
+        app:layout_constraintBottom_toTopOf="@id/AfterTomorrowSign"
+        app:layout_constraintStart_toStartOf="@id/TodaySign"
+        app:layout_constraintEnd_toEndOf="@id/TodaySign"
+        />
+
+    <TextView
+        android:id="@+id/AfterTomorrowSign"
+        style="@style/Bracket.Sign"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/AfterTomorrow"
+        app:layout_constraintTop_toBottomOf="@id/NextDaySign"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/NextDaySign"
+        app:layout_constraintEnd_toEndOf="@id/NextDaySign" />
+
+    <TextView
+        android:id="@+id/TwoDaysLeftMonth"
+        style="@style/Bracket.Sign"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/TwoDaysBeforeMonth"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/TwoDaysLeftSign"
+        app:layout_constraintBottom_toBottomOf="@id/TwoDaysLeftSign"
+        app:layout_constraintEnd_toStartOf="@id/TwoDaysLeftBracket"
+        />
+
+    <TextView
+        android:id="@+id/OneDayLeftMonth"
+        style="@style/Bracket.Sign"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/OneDayBeforeMonth"
+        app:layout_constraintTop_toTopOf="@id/OneDayLeftSign"
+        app:layout_constraintStart_toStartOf="@id/TwoDaysLeftMonth"
+        app:layout_constraintBottom_toBottomOf="@id/OneDayLeftSign"
+        app:layout_constraintEnd_toEndOf="@id/TwoDaysLeftMonth"
+        />
+
+    <TextView
+        android:id="@+id/TodayMonth"
+        style="@style/Bracket.Sign"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/TodayMonth"
+        app:layout_constraintTop_toTopOf="@id/TodaySign"
+        app:layout_constraintStart_toStartOf="@id/TwoDaysLeftMonth"
+        app:layout_constraintBottom_toBottomOf="@id/TodaySign"
+        app:layout_constraintEnd_toEndOf="@id/OneDayLeftMonth"/>
+
+    <TextView
+        android:id="@+id/NextDayMonth"
+        style="@style/Bracket.Sign"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/NextDayMonth"
+        app:layout_constraintTop_toTopOf="@id/NextDaySign"
+        app:layout_constraintStart_toStartOf="@id/TwoDaysLeftMonth"
+        app:layout_constraintBottom_toBottomOf="@id/NextDaySign"
+        app:layout_constraintEnd_toEndOf="@id/TodayMonth"
+        />
+
+    <TextView
+        android:id="@+id/AfterTomorrowMonth"
+        style="@style/Bracket.Sign"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/AfterTomorrowMonth"
+        app:layout_constraintTop_toTopOf="@id/AfterTomorrowSign"
+        app:layout_constraintStart_toStartOf="@id/TwoDaysLeftMonth"
+        app:layout_constraintBottom_toBottomOf="@id/AfterTomorrowSign"
+        app:layout_constraintEnd_toEndOf="@id/NextDayMonth"/>
+
+    <TextView
+        android:id="@+id/TwoDaysLeftBracket"
+        style="@style/Bracket.Bottom"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/TwoDaysBeforeTemperature"
+        app:layout_constraintTop_toTopOf="@id/TwoDaysLeftMonth"
+        app:layout_constraintBottom_toBottomOf="@id/TwoDaysLeftMonth"
+        app:layout_constraintStart_toEndOf="@id/TwoDaysLeftMonth"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:drawableLeftCompat="@drawable/cloudly"
+ />
+
+    <TextView
+        android:id="@+id/OneDayLeftBracket"
+        style="@style/Bracket.Bottom"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/OneDayBeforeTemperature"
+        app:layout_constraintTop_toTopOf="@id/OneDayLeftMonth"
+        app:layout_constraintStart_toStartOf="@id/TwoDaysLeftBracket"
+        app:layout_constraintBottom_toBottomOf="@id/OneDayLeftMonth"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:drawableLeftCompat="@drawable/sunny" />
+
+    <TextView
+        android:id="@+id/TodayBracket"
+        style="@style/Bracket.Bottom"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/TodayTemperature"
+        app:layout_constraintTop_toTopOf="@id/TodayMonth"
+        app:layout_constraintStart_toStartOf="@id/OneDayLeftBracket"
+        app:layout_constraintBottom_toBottomOf="@id/TodayMonth"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:drawableLeftCompat="@drawable/rainy" />
+
+    <TextView
+        android:id="@+id/NextDayBracket"
+        style="@style/Bracket.Bottom"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/NextDayTemperature"
+        app:layout_constraintTop_toTopOf="@id/NextDayMonth"
+        app:layout_constraintBottom_toBottomOf="@id/NextDayMonth"
+        app:layout_constraintStart_toStartOf="@id/TodayBracket"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:drawableLeftCompat="@drawable/rainy" />
+
+    <TextView
+        android:id="@+id/AfterTomorrowBracket"
+        style="@style/Bracket.Bottom"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/AfterTomorrowTemperature"
+        app:layout_constraintTop_toTopOf="@id/AfterTomorrowMonth"
+        app:layout_constraintStart_toStartOf="@id/NextDayBracket"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:drawableLeftCompat="@drawable/storm" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
